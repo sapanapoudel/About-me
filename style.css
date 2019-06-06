@@ -11,7 +11,7 @@ h1 {
 div{
   height: 300px;
   width: 800px;
-  background-color: brown;
+  background-color: #ccc;
   display: inline-block;
   border: 1px solid black;
 }
