@@ -4,7 +4,7 @@
 
 //Receiving and using username
 
-var username = prompt('What is your username');
+var username = prompt('What is your username?');
 var message = 'My username is: ' + username;
 alert(message);
 console.log('username: ' + username);
@@ -12,27 +12,27 @@ console.log('username: ' + username);
 var correctAnswer = 0;
 //Fungame 1
 
-var favoriteFood = prompt('Is my favorite food spicy');
+var favoriteFood = prompt('Is my favorite food spicy?');
 console.log('favoriteFood: ' +favoriteFood.toLocaleUpperCase()); 
 
 if (favoriteFood === 'no' || favoriteFood === 'n'){
   alert('Yes, i hate spicy food');
   correctAnswer++;
 }else if(favoriteFood === 'yes' || favoriteFood === 'y'){
-  alert('I prefer sweet');
+  alert('No, I prefer sweet');
 }else {
   alert('let\'s play it\'s fun');
 }
 
 //Fungame 2 
-var favoriteplace = prompt('Is your favorite place Seattle');
+var favoriteplace = prompt('Is my favorite place Seattle?');
 console.log('favoriteplace: '+favoriteplace.toLocaleUpperCase());
 
 if (favoriteplace === 'yes' || favoriteplace === 'y'){
   alert('Yes, I like rain');
   correctAnswer++;
 }else if(favoriteplace === 'no' || favoriteplace === 'n') {
-  alert('You better know me better');
+  alert('You better know me');
 }else{
   alert('let\'s play it\'s fun');
 }
@@ -52,7 +52,7 @@ if (favoriteHobby === 'no' || favoriteHobby === 'n'){
 
 
 //fungame4
-var favoriteGame = prompt('Is your favorite Game soccor');
+var favoriteGame = prompt('Is my favorite Game soccor?');
 console.log('favoriteGame: '+favoriteGame.toLocaleUpperCase());
 
 if (favoriteGame === 'yes' || favoriteGame === 'y'){
@@ -65,25 +65,26 @@ if (favoriteGame === 'yes' || favoriteGame === 'y'){
 }
 
 //Fungame5
-var favoriteSubject= prompt('Is your favorite subject data structure');
+var favoriteSubject= prompt('Is my favorite subject data structure?');
 console.log('favoriteSubject: '+favoriteSubject.toLocaleUpperCase());
 
 if (favoriteSubject === 'no' || favoriteSubject === 'n'){
   alert('you got it');
   correctAnswer++;
 }else if(favoriteSubject === 'yes' || favoriteSubject === 'y'){
-  alert('I thought you know me');
+  alert('I thought you knew me');
 }else{
   alert('let\'s play it\'s fun');
 }
 
-//================================================================================================================
+//=====================================================================================
 //Question 6
 //Generating random number 1 through 50
 var randomNumber = Math.ceil(Math.random()*50) +1;
 console.log('randomNumber: ' + randomNumber);
 
-var guessState = parseInt(prompt('Guess how many state I have visited so far'));
+
+var guessState = parseInt(prompt('Guess how many state I have visited so far, you have 4 attempts'));
 console.log('guessState: ' + guessState + ' is a ' + typeof guessState);
 
 
@@ -110,15 +111,15 @@ if (guessState === randomNumber){
   alert('Hey congratulation! you got it');
   correctAnswer++;
 }
-
+alert('Correct answer is: ' + randomNumber);
 //==================================================================================================================
 //Question 7
 
 //creating Array called countryVisited which has the list of country
-var countryVisited = new Array('UK', 'Maxico', 'Canada', 'Nepal', 'Australia', 'India');
+var countryVisited = new Array('UK', 'Mexico', 'Canada', 'US', 'Australia', 'India');
 console.log('countryVisited: ' + countryVisited);
 
-var customerChoice= prompt('Which country I have visited?');
+var customerChoice= prompt('Which country I have visited?').toLocaleUpperCase();
 console.log('customerChoice: ' + customerChoice);
 
 var attempt = 1;  
