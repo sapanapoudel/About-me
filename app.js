@@ -4,7 +4,7 @@
 
 //Receiving and using username
 
-var username = prompt('What is your username');
+var username = prompt('What is your username?');
 var message = 'My username is: ' + username;
 alert(message);
 console.log('username: ' + username);
