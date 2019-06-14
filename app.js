@@ -34,14 +34,14 @@ var guessingGame = function (question, answer) {
   var response = prompt(question).toLowerCase();
   console.log('favoriteFood: ' + response);
   //checks correct answer
-  if (answer === response) {
+  if (answers === response) {
     correctAnswer++;
     alert('You got it!');
-    console.log(question + ' :expected answer: ' + answer + ' answer: ' + response);
+    console.log(question + ' :expected answer: ' + answer+ ' answer: ' + response);
   } else {
     //incorect answer:
     alert('Keep trying!');
-    console.log(question + ' :expected answer: ' + answer + ' answer: ' + response);
+    console.log(question + ' :expected answer: ' + answer+ ' answer: ' + response);
   }
 };
 for (let i = 0; i < questions.length; i++) {
@@ -78,6 +78,7 @@ var guessingState = function () {
     alert('Hey congratulation! you got it');
     correctAnswer++;
   }
+  alert('correct answer is: ' + randomNumber);
 };
 guessingState();
 
