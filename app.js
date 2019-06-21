@@ -29,23 +29,31 @@ var answers = [
   'no'
 ];
 
-var guessingGame = function (question, answer) {
+var answers1 = [
+  'n',
+  'y',
+  'n',
+  'y',
+  'n',
+  'n'
+];
+
+var guessingGame = function (question, answer, answer1) {
   totalQuestions++;
   var response = prompt(question).toLowerCase();
   console.log('favoriteFood: ' + response);
   //checks correct answer
-  if (answers === response) {
+  if (answer === response || answer1 === response) {
     correctAnswer++;
     alert('You got it!');
-    console.log(question + ' :expected answer: ' + answer+ ' answer: ' + response);
+
   } else {
     //incorect answer:
     alert('Keep trying!');
-    console.log(question + ' :expected answer: ' + answer+ ' answer: ' + response);
   }
 };
 for (let i = 0; i < questions.length; i++) {
-  guessingGame(questions[i], answers[i]);
+  guessingGame(questions[i], answers[i], answers1[i]);
 }
 //================================================================================================================
 //Question 6
@@ -87,7 +95,7 @@ guessingState();
 var guessCountry = function () {
   totalQuestions++;
   //creating Array called countryVisited which has the list of country
-  var countryVisited = ['UK', 'Maxico', 'Canada', 'Nepal', 'Australia', 'India'];
+  var countryVisited = ['UK', 'Mexico', 'Canada', 'Nepal', 'Australia', 'India'];
   console.log('countryVisited: ' + countryVisited);
 
   var customerChoice = prompt('Which country I have visited?');
