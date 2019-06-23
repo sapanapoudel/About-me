@@ -98,7 +98,7 @@ var guessCountry = function () {
   var countryVisited = ['UK', 'Mexico', 'Canada', 'Nepal', 'Australia', 'India'];
   console.log('countryVisited: ' + countryVisited);
 
-  var customerChoice = prompt('Which country I have visited?');
+  var customerChoice = prompt('Which country I have visited?').toUpperCase();
   console.log('customerChoice: ' + customerChoice);
 
   var attempt = 1;
